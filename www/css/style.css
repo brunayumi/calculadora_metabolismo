@@ -1,4 +1,4 @@
-/**/
+
 label{
     margin: 5px;
     color: #000;
@@ -12,9 +12,10 @@ label{
    align-items: center;
    margin-top: 20px;
    margin-bottom: 20px;
+   border-radius: 5px;
  }
 
- #textinho{
+ .textinho{
    color: #000;
    background-color: #fce627;
 
@@ -25,11 +26,16 @@ label{
   height: 160px;
   align-items: center;
 }
-
-#botaoC{
+#calcular{
   background-color: #fce627;
   color: #000;
+  margin-top: 26px;
 }
+
+.btn {
+  height: 34px;
+}
+
 .rodape{
   margin-top: 60px;
   margin-right: 9px;
