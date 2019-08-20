@@ -26,10 +26,11 @@ label{
   height: 160px;
   align-items: center;
 }
+
 #calcular{
   background-color: #fce627;
   color: #000;
-  margin-top: 26px;
+  margin-top: 30px;
 }
 
 .btn {
@@ -37,7 +38,7 @@ label{
 }
 
 .rodape{
-  margin-top: 60px;
+  margin-top: 50px;
   margin-right: 9px;
   text-align: right;
 }

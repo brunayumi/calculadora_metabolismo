@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <script src="components/loader.js"></script>
+  <script src="components/jquery-3.3.1.min.js"></script>
   <script src="components/acao.js"></script>
 
   <link rel="stylesheet" href="components/loader.css">
@@ -24,9 +25,9 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="input-group">
-                <label for="genero" id="genero" name="genero">Sexo: </label>
-                 <input type="radio" id="m" value="m"> Homem
-                 <input type="radio" id="f" value="f"> Mulher
+                <label for="sexo" id="genero">Sexo: </label>
+                 <input type="radio" id="genero" value="m"> Homem
+                 <input type="radio" id="genero" value="f"> Mulher
                 </div>
               </div>
             </div>
@@ -37,8 +38,8 @@
             <div class="col-xs-12">
              <label for="peso">Peso: </label>
               <div class="input-group">
-               <input type="number" class="form-control" placeholder="Insira seu peso aqui." aria-describedby="basic-addon2">
-                <span class="input-group-addon textinho" id="peso" value="peso">KG</span>
+               <input type="number" class="form-control" placeholder="Insira seu peso aqui." id="peso" >
+                <span class="input-group-addon textinho">KG</span>
               </div>     
              </div>
             </div>
@@ -47,10 +48,10 @@
           <!-- começo da input de estatura-->
            <div class="row">
             <div class="col-xs-12">
-             <label for="estatura">Altura: </label>
+             <label for="altura">Altura: </label>
               <div class="input-group">
-               <input type="number" class="form-control" placeholder="Insira sua altura aqui." aria-describedby="basic-addon2">
-                <span class="input-group-addon textinho" id="altura" value="altura">CM</span>
+               <input type="number" class="form-control" placeholder="Insira sua altura aqui."  id="altura">
+                <span class="input-group-addon textinho">CM</span>
               </div>     
              </div>
             </div>
@@ -61,8 +62,8 @@
             <div class="col-xs-12">
              <label for="idade">Idade: </label>
               <div class="input-group">
-               <input type="number" class="form-control" placeholder="Insira sua idade aqui." aria-describedby="basic-addon2">
-                <span class="input-group-addon textinho" id="idade" value="idade">ANOS</span>
+               <input  id="idade" type="number" class="form-control" placeholder="Insira sua idade aqui." id="idade" >
+                <span class="input-group-addon textinho">ANOS</span>
               </div>     
             </div>
            </div> 
@@ -73,12 +74,12 @@
             <div class="col-xs-12">
               <div class="input-group">
                 <label for="nivel">Nivel de atividade física: </label>
-                 <select class="form-control" name="atividadefisica">
-                  <option value="sedentario">Sedentário (pouco ou nenhum exercício)</option>
-                  <option value="levementeativo">Levemente ativo (exercício leve, 1 a 3 dias por semana) </option>
-                  <option value="moderadamenteativo">Moderadamente ativo (exercício moderado, 3 a 5 dias por semana)</option>
-                  <option value="altamenteativo">Altamente ativo (exercício pesado, 5 a 6 dias por semana)</option>
-                  <option value="extremamenteativo">Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia)</option>
+                 <select class="form-control" id="ativfisica">
+                  <option value="1.2">Sedentário (pouco ou nenhum exercício)</option>
+                  <option value="1.375">Levemente ativo (exercício leve, 1 a 3 dias por semana) </option>
+                  <option value="1.55">Moderadamente ativo (exercício moderado, 3 a 5 dias por semana)</option>
+                  <option value="1.725">Altamente ativo (exercício pesado, 5 a 6 dias por semana)</option>
+                  <option value="1.9">Extremamente ativo (exercício pesado diariamente e até 2 vezes por dia)</option>
                  </select>
                </div>
               </div>     
@@ -89,7 +90,7 @@
             <div class="row">
               <div class="col-xs-6">
                <div class="form-group">
-                <button class="btn btn-block" type="button" id="calcular" name="calcular" value="calcular">Calcular</button>
+                <button class="btn btn-block" type="button" id="calcular">Calcular</button>
                </div>
               </div>
                <!-- final do botão calcular -->
@@ -98,11 +99,12 @@
                <div class="col-xs-6">
                 <label for="resultado">Resultado: </label>
                  <div class="input-group">
-                  <input type="number" class="form-control" aria-describedby="basic-addon2">
-                   <span class="input-group-addon textinho" id="resultado" value="resultado">KCAL</span>
+                  <input type="number" class="form-control" id="resultado" readonly>
+                   <span class="input-group-addon textinho">KCAL</span>
                  </div>
                  </div>
                </div>
+               
               <!-- final da input resultado -->
 
      </form>
